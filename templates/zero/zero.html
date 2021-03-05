@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+
+<!-- Static file -->
+
+{% block StaticHead %}
+	<meta data-meta-zero='zero'>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='zero/css/style.css') }}">
+	
+	<script src="{{ url_for('static', filename='zero/js/GlobalFunction.js') }}"></script>
+	<script src="{{ url_for('static', filename='zero/js/settings.js') }}"></script>
+	<script src="{{ url_for('static', filename='zero/js/class.js') }}"></script>
+	<script src="{{ url_for('static', filename='zero/js/function.js') }}"></script>
+
+
+
+
+	<!-- adaptaciv ekran -->
+	<style data-screens-style-size='all'></style>
+	<style data-screens-style-size='SCREENS_320-480' type="deactivate/text"></style>
+	<style data-screens-style-size='SCREENS_480-640' type="deactivate/text"></style>
+	<style data-screens-style-size='SCREENS_640-960' type="deactivate/text"></style>
+	<style data-screens-style-size='SCREENS_960-1200' type="deactivate/text"></style>
+	<style data-screens-style-size='SCREENS_1200' type="deactivate/text"></style>
+
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='zero/css/styleImportant.css') }}">
+
+{% endblock %}
+{% block StaticHeader %}{% endblock %}
+{% block StaticFooter %}
+<script src="{{ url_for('static', filename='zero/js/script.js') }}"></script>
+<script src="{{ url_for('static', filename='zero/js/event.js') }}"></script>
+
+<script src="{{ url_for('static', filename='zero/js/socket.js') }}"></script>
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+	{% include 'includes/zero/header/header.html' %}
+	{% include 'includes/zero/content/content.html' %}
+	{% include 'includes/zero/footer/footer.html' %}
+
+	<div id="HideBlock" class="noselect" style="display: block;">
+		<a href="/" target="_blank">
+			<div id="HideBlockContainer">Recort not select</div>
+		</a>
+	</div>
+	<div id="saveBlockAlert" class="noselect">Save</div>
+
+{% endblock %}

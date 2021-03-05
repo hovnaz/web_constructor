@@ -1,0 +1,102 @@
+/*this file for new elements */
+.empty {
+    outline: 1px dashed #555 !important;
+    outline-offset: -1px !important;
+    -webkit-box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 4px rgba(255, 255, 255, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 4px rgba(255, 255, 255, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+    padding-bottom: 75px;
+    padding-right: 75px;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    display: block;
+}
+.empty-block {
+    outline: 1px dashed #555 !important;
+    outline-offset: -1px !important;
+    -webkit-box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 4px rgba(255, 255, 255, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 4px rgba(255, 255, 255, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+    min-height: 75px;
+    min-width: 75px;
+    display: block;
+}
+
+
+
+
+
+
+.w-container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 940px;
+}
+.w-container::before, .w-container::after {
+    content: " ";
+    display: table;
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    -ms-grid-row: 1;
+    grid-row-start: 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: 2;
+    -ms-grid-row-span: 1;
+    grid-row-end: 2;
+}
+.w-container::after {
+    clear: both;
+}
+
+
+
+.w-row::before, .w-row::after {
+    content: " ";
+    display: table;
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    -ms-grid-row: 1;
+    grid-row-start: 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: 2;
+    -ms-grid-row-span: 1;
+    grid-row-end: 2;
+}
+
+.w-col {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+}
+
+.w-col-1 {width: 8.33333333%;}
+.w-col-2 {width: 16.66666667%;}
+.w-col-3 {width: 25%;}
+.w-col-4 {width: 33.33333333%;}
+.w-col-5 {width: 41.66666667%;}
+.w-col-6 {width: 50%;}
+.w-col-7 {width: 58.33333333%;}
+.w-col-8 {width: 66.66666667%;}
+.w-col-9 {width: 75%;}
+.w-col-10 {width: 83.33333333%;}
+.w-col-11 {width: 91.66666667%;}
+.w-col-12 {width: 100%;}
+
+
+.w-inline-block {
+    max-width: 100%;
+    display: inline-block;
+}
+
+
+
+.Columns{
+    display: flex;
+}
+
+
+.icon::before {
+   font-family: "Font Awesome 5 Free";
+   content: "\f095";
+   font-weight: 900;
+}

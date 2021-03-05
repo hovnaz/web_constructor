@@ -1,0 +1,38 @@
+<header id="headerBase" class="noselect">
+	<!-- AddBlockManagerContainer -->
+	<ul>
+		<li>
+			<div id="AddBlockManagerOpen" onclick="$('#AddBlockManagerContainer').fadeIn(300).css('left',0)"><i class="fas fa-plus"></i></div>
+		</li>
+		<li>	
+			<div class="header-style-container-item">
+				<div class="header-style-SCREENS-item" title="SCREENS: 320-480 " data-screens-size='SCREENS_320-480' onclick="FW.changeSizeWindow(this)">
+					<img src="{{ url_for('static', filename='zero/img/svg/windowSize1.svg') }}">
+				</div>
+				<div class="header-style-SCREENS-item" title="SCREENS: 480-640 " data-screens-size='SCREENS_480-640' onclick="FW.changeSizeWindow(this)">
+					<img src="{{ url_for('static', filename='zero/img/svg/windowSize2.svg') }}">
+				</div>
+				<div class="header-style-SCREENS-item" title="SCREENS: 640-960 " data-screens-size='SCREENS_640-960' onclick="FW.changeSizeWindow(this)">
+					<img src="{{ url_for('static', filename='zero/img/svg/windowSize3.svg') }}">
+				</div>
+				<div class="header-style-SCREENS-item" title="SCREENS: 960-1200 " data-screens-size='SCREENS_960-1200' onclick="FW.changeSizeWindow(this)">
+					<img src="{{ url_for('static', filename='zero/img/svg/windowSize4.svg') }}">
+				</div>
+				<div class="header-style-SCREENS-item" title="SCREENS: 1200—MAX " data-screens-size='SCREENS_1200' onclick="FW.changeSizeWindow(this)">
+					<img src="{{ url_for('static', filename='zero/img/svg/windowSize5.svg') }}">
+				</div>
+				<div class="header-style-SCREENS-item" title="SCREENS: All " data-screens-size='all' onclick="FW.changeSizeWindow(this)" style="opacity: 1;">
+					<img src="{{ url_for('static', filename='zero/img/svg/windowSize5.svg') }}">
+					<span class="header-style-SCREENS-item-all">All</span>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<ul class="container-save-project-header">
+		<li class="container-item-save-project-header">
+
+			<button class="button-save-project-header" onclick="FW.saveProject('save')" style="border-radius: 5px 0 0 5px;">Save</button>
+			<button class="button-save-project-header" onclick="if (RealTime) {RealTime = false;$(this).css('background-color','#222')} else {RealTime = true;$(this).css('background-color','#335F70')}" style="border-radius: 0 5px 5px 0;">RealTime</button>
+		</li>
+	</ul>
+</header>

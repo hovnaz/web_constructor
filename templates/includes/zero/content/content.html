@@ -1,0 +1,182 @@
+
+
+
+<div id="AddBlockManagerContainer" class="noselect">
+	<header id="AddBlockManagerContainerHeader">
+		<span id="AddBlockManagerContainerHeaderClosePrev" class="AddBlockManagerContainerHeaderClose" onclick="
+			let cl = $(this).attr('class');
+			if (cl == 'AddBlockManagerContainerHeaderClose') {$('#AddBlockManagerContainer').fadeOut(100).css('left','-250px');}
+			else{$('#AddBlockManagerContainerbody').fadeIn(300);MenuData('AddBlockManager','AddBlockManager');replaceClass('#AddBlockManagerContainerHeaderClosePrev','AddBlockManagerContainerHeaderPrev',' AddBlockManagerContainerHeaderClose')}
+		 "></span>
+
+		<span id="AddBlockManagerContainerHeaderName">
+			<span data-attr-toggle='AddBlockManager' data-attr-toggle-category='AddBlockManager' style="display: block;">Add Block Manager</span>
+			<!-- Add Block Manager active category name-->
+		</span>
+	</header>
+	<main id="AddBlockManagerContainerbody">
+
+		<!-- Add Block Manager category button-->
+	</main>
+
+	<main id="AddBlockManagerContainerbodyBlock">
+
+	</main>
+</div>
+
+
+<div id="StyleManager" class="noselect">
+	<header id="StyleManagerContainerHeader">
+		<span id="StyleManagerContainerHeaderClosePrev" class="AddBlockManagerContainerHeaderClose" onclick="
+			let cl = $(this).attr('class');
+			if (cl == 'AddBlockManagerContainerHeaderClose') {$('#StyleManager').fadeOut(300).css('right','-350px');$('#fix-bar-settings-btn').show()}
+			else{$('#StyleManagerContainerbody').fadeIn(300);MenuData('SettingsBlockManager','stylemanager');replaceClass('#StyleManagerContainerHeaderClosePrev','AddBlockManagerContainerHeaderPrev',' AddBlockManagerContainerHeaderClose')}
+		 "></span>
+
+
+
+
+
+		<span id="StyleManagerContainerHeaderName">
+			<span data-attr-toggle='SettingsBlockManager' data-attr-toggle-category='stylemanager' style="display: block;">Block Manager</span>
+			<!-- Add Block Manager active category name-->
+			<span data-attr-toggle='styleManager' data-attr-toggle-category='stylemanager'>style</span>
+			<span data-attr-toggle='jqueryManager' data-attr-toggle-category='stylemanager'>Event</span>
+			<span data-attr-toggle='animeManager' data-attr-toggle-category='stylemanager'>Animation</span>
+		</span>
+	</header>
+
+	<main id="StyleManagerContainerbody">
+
+		<!-- Add Block Manager category button-->
+
+		<div class="AddBlockManagerCategoryBtn" onclick="$('#StyleManagerContainerbody').hide();MenuData('styleManager','stylemanager');replaceClass('#StyleManagerContainerHeaderClosePrev','AddBlockManagerContainerHeaderClose','AddBlockManagerContainerHeaderPrev')">Style</div>
+		<div class="AddBlockManagerCategoryBtn" onclick="$('#StyleManagerContainerbody').hide();MenuData('jqueryManager','stylemanager');replaceClass('#StyleManagerContainerHeaderClosePrev','AddBlockManagerContainerHeaderClose','AddBlockManagerContainerHeaderPrev')">Event</div>
+		<div class="AddBlockManagerCategoryBtn" onclick="$('#StyleManagerContainerbody').hide();MenuData('animeManager','stylemanager');replaceClass('#StyleManagerContainerHeaderClosePrev','AddBlockManagerContainerHeaderClose','AddBlockManagerContainerHeaderPrev')">Animation</div>
+
+	</main>
+
+	<main id="StyleManagerContainerbodyBlock">
+
+		<div data-attr-toggle='styleManager' data-attr-toggle-category='stylemanager'>
+
+			<div class="SelectorCssContainer">
+					<div class="SelectorCss_item" onclick="$('#SelectorCss_item-sel').hide().text('this');$('#SelectorCss_item-sel-remove').hide();FW.replaceStyleManager('this');">Selector</div>
+					<div class="SelectorCss_item" id="SelectorCss_item-sel">this</div>
+					<div class="SelectorCss_item" id="SelectorCss_item-sel-remove" onclick="FW.changeSelectorCss($('#SelectorCss_item-sel').text(),'remove');FW.replaceStyleManager('this');">remove</div>
+				</div>
+				<div class="container-StyleManager-slide-btn" onclick="NextSlide(this)">Selector</div>
+				<div class="container-StyleManager-slide" data-slide-toggle>
+					<div id="container-all-SelectorCss"></div>
+
+					<span style="height: 30px;display: block;"></span>
+
+					<div id="container-add-SelectorCss">
+					<div class="styleManager-input-container" style="position: relative;">
+						<form action="javascript:void(0);">
+							<input type="text" class="styleManager-input" placeholder="Selector Add" id="addSelectorCssInput">
+							<input type="submit" onclick="$('#addSelectorCss').show()" style="display: none;">
+						</form>
+						<span class="styleManager-input-range styleManager-input-line-bottom"></span>
+					</div>
+					<span style="height: 30px;display: block;"></span>
+					<div id="addSelectorCss" class="SelectorCss_item" onclick="FW.changeSelectorCss($('#addSelectorCssInput').val(),'add')">Add Selector</div>
+					</div>
+				</div>
+
+			<form action="javascript:void(0)" class="StayleManager" id="styleManagerForm">
+
+			</form>
+		</div>
+		<div data-attr-toggle='jqueryManager' data-attr-toggle-category='stylemanager'>
+			<form action="javascript:void(0)" class="StayleManager" id="jqueryManagerForm">
+			</form>
+		</div>
+		<div data-attr-toggle='animeManager' data-attr-toggle-category='stylemanager'>
+			<form action="javascript:void(0)" class="StayleManager" id="animeManagerForm">
+				
+			</form>
+		</div>
+	</main>
+
+
+</div>
+
+<div id="ZeroBlock-View">
+	<div class="ArtBoard_Container noselect">
+		<div class="desing-grid noselect ZeroBlock-View-size" style="position: absolute;z-index: 2001;overflow: hidden;height: inherit;">
+			<!-- Art bord  -->
+			<div id="ArtBoard" class="body__ArtBoard ZeroBlock-View-size" data-tag-name='body'>
+				
+			</div>
+			<div class="ArtBoardResizerContainer">
+				<div class="ArtBoardResizer" id="ArtBoardResizerLeft"></div>
+				<div class="ArtBoardResizer" id="ArtBoardResizerDown"></div>
+				<div class="ArtBoardResizer" id="ArtBoardResizerRight"></div>
+			</div>
+
+
+			<div class="tn-guides__line" style="left:19px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:79px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:119px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:179px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:219px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:279px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:319px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:379px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:419px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:479px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:519px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:579px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:619px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:679px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:719px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:779px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:819px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:879px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:919px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:979px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1019px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1079px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1119px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1179px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1219px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1279px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1319px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1379px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1419px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1479px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1519px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1579px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1619px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1679px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1719px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1779px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1819px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1879px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1919px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:1979px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:2019px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:2079px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:2119px; height:5000px;"></div>
+			<div class="tn-guides__line" style="left:2159px; height:5000px;"></div>
+
+
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

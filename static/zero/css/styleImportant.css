@@ -1,0 +1,12 @@
+[contenteditable="true"], [contenteditable="true"] * {
+    cursor: text !important;
+}
+[contenteditable="true"] {
+    outline: none;
+    -webkit-box-shadow: 0 0 0px 4px rgba(23, 141, 247, 0.2);
+    box-shadow: 0 0 0px 4px rgba(23, 141, 247, 0.2);
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}

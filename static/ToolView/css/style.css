@@ -1,0 +1,33 @@
+/*tp-shortcuttools__two*/
+/*
+@media screen and (min-width: 480px) {
+ .tp-shortcuttools__two {
+	display: none;
+  }
+}*/
+
+@media screen and (min-width: 100px) and (max-width: 800px) {
+	body .tp-shortcuttools__two{
+		background-color: red;
+		display: none;
+	}
+	body #MoreblocksContainer{
+		width: 100vw;
+	}
+}
+#MoreblocksContainer{
+	position: fixed;
+	left: -250px;
+	top: 0;
+	background-color: #fff;
+	border-right: 1px #eee solid;
+	box-shadow: 0 0 15px #ccc;
+	width: 250px;
+	height: 100vh;
+	z-index: 90000;
+	transition: 600ms;
+	display: none;
+}
+body{
+	padding-top: 20px
+}

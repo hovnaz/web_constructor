@@ -1,0 +1,184 @@
+
+
+
+
+<!-- Selector Elements -->
+
+<main id="AddBlockManagerClone"></main>
+<main id="MoveElClone"></main>
+<main id="MoveElCloneOne"></main>
+<main id="AddBlockManagerCloneMove" class="noselect"></main>
+
+
+<main id="containerSelectorElements">
+	<div id="SelectorElementsTop" class="SelectorElements"></div>
+	<div id="SelectorElementsDown" class="SelectorElements"></div>
+	<div id="SelectorElementsLeft" class="SelectorElements"></div>
+	<div id="SelectorElementsRight" class="SelectorElements"></div>
+	<div id="SelectorElementsInfo" class="noselect" onclick="FW.open_dropdownMenu_settings('open')"></div>
+	<main id="SelectorElementsInfoContainer" class="noselect">
+		<header>
+			<span id="seelctTagNameRecort">tag</span>
+			<br>
+			<span id="seelctTagNameRecortId">id</span>
+		</header>
+		<main>
+			<span data-artbord-id-menu='Columns'>
+				<div class="ColumnsButton" onclick="FW.open_dropdownMenu_settings('Columns','6-6')">
+					<i class="Columnsitem bg_image-list Columns-6_6"></i>	
+				</div>
+				<div class="ColumnsButton" onclick="FW.open_dropdownMenu_settings('Columns','4-4-4')">
+					<i class="Columnsitem bg_image-list Columns-3_3"></i>	
+				</div>
+				<div class="ColumnsButton" onclick="FW.open_dropdownMenu_settings('Columns','3-3-3-3')">
+					<i class="Columnsitem bg_image-list Columns-3_9"></i>	
+				</div>
+				<div class="ColumnsButton" onclick="FW.open_dropdownMenu_settings('Columns','3-9')">
+					<i class="Columnsitem bg_image-list Columns-9_3"></i>	
+				</div>
+				<div class="ColumnsButton" onclick="FW.open_dropdownMenu_settings('Columns','9-3')">
+					<i class="Columnsitem bg_image-list Columns-2_3_5_2" ></i>	
+				</div>
+				<div class="ColumnsButton" onclick="FW.open_dropdownMenu_settings('Columns','2-8-2')">
+					<i class="Columnsitem bg_image-list Columns-222_4_2"></i>	
+				</div>
+				<div class="ColumnsButton" onclick="FW.open_dropdownMenu_settings('Columns','2-3-5-2')">
+					<i class="Columnsitem bg_image-list Columns-4_4"></i>	
+				</div>
+				<div class="ColumnsButton" onclick="FW.open_dropdownMenu_settings('Columns','2-2-2-4-2')">
+					<i class="Columnsitem bg_image-list Columns-2424"></i>	
+				</div>
+				<div class="ColumnsButton" onclick="FW.open_dropdownMenu_settings('Columns','2-2-2-2-2-2')">
+					<i class="Columnsitem bg_image-list Columns-2"></i>	
+				</div>
+			</span>
+		</main>
+		<!-- petq e voroshaki baner anel -->
+		<footer>
+			<ul>
+				<li onclick="FW.EventEdit('remove')"><span>Delete</span></li>
+				<li onclick="FW.EventEdit('duplicate')"><span>Duplicate</span></li>
+			</ul>
+		</footer>
+	</main>
+</main>
+
+<main id="containerSelectorElements_Dble">
+	<div id="SelectorElementsTop_Dble" class="SelectorElements"></div>
+	<div id="SelectorElementsDown_Dble" class="SelectorElements"></div>
+	<div id="SelectorElementsLeft_Dble" class="SelectorElements"></div>
+	<div id="SelectorElementsRight_Dble" class="SelectorElements"></div>
+</main>
+
+<main id="SelectorElementPos"></main>
+
+
+<!-- menu -->
+
+<!-- Settings -->
+
+<div class="fix-bar-settings-btn noselect" id="fix-bar-settings-btn" onclick="$('#StyleManager').fadeIn(300).css('right',0);$(this).hide()">Settings</div>
+
+<div id="parentsElBar" class="noselect">
+</div>
+
+
+<!-- warning alert -->
+<div id="warning-alert" class="noselect">Warning</div>
+
+
+
+<div id="contextmenuMenuArtbord" class="noselect">
+	<div class="vertical-menu">
+		<span>Home</span>
+		<span>Link 1</span>
+		<span>Link 2</span>
+		<span>Link 3</span>
+		<span>Link 4</span>
+	</div>
+</div>
+
+
+
+<div id="HtmlTreeContainer">
+	<header class="noselect">
+		<span id="HtmlTreeContainer-close" onclick="$('#HtmlTreeContainer').fadeOut(300)">
+			<i class="fas fa-times"></i>
+		</span>
+		<span id="HtmlTreeContainer-title">Html Navigation</span>
+	</header>
+	<div id="HtmlTreeContent" class="noselect">
+		<ul id="HtmlTreeContentMyUL"></ul>
+	</div>
+</div>
+
+
+
+<div id="id-settings-steps">
+
+	<ul style="display: flex;justify-content: flex-start;margin-bottom: 15px;padding: 0;">
+		<li class="styleManager-container-margin" style="display: block;width: 100%;">
+			<label class="styleManager-label" style="width: 100%; text-align: left; opacity: 0.5;">Setps</label>
+		</li>
+	</ul>
+
+	<div id="settings-anime-steps-container">
+
+		<div id="settings-anime-steps-container-head">
+			<div class="settings-anime-step settings-anime-step-active">
+				<div class="settings-anime-step-move-active"></div>
+				<div class="settings-anime-step-lable"><span>Start</span></div>
+				<div class="settings-anime-step-duration">0s</div>
+			</div>
+		</div>
+		<div id="settings-anime-steps-container-body"></div>
+		<div id="settings-anime-steps-container-footer">
+			<div class="settings-anime-button" onclick="FW.AddItemStepAnime()">+ Add step</div>
+		</div>
+	</div>
+	<ul style="display: flex;justify-content: flex-start;margin-bottom: 15px;padding: 0;">
+		<li class="styleManager-container-margin" style="display: block;width: 100%;">
+		</li>
+	</ul>
+</div>
+
+
+<div id="id-settings-test">
+	<ul style="display: flex;justify-content: flex-start;margin-bottom: 15px;padding: 0;">
+		<li class="styleManager-container-margin" style="display: block;width: 100%;">
+			<label class="styleManager-label" style="width: 100%; text-align: left; opacity: 0.5;">Properties for: step <span id="lable-step-index">Start</span></label>
+		</li>
+	</ul>
+	<ul style="display: flex;justify-content: flex-start;margin-bottom: 15px;padding: 0;">
+		<li class="styleManager-container-margin">
+			<label class="styleManager-label" style="width: 100%;text-align: center;">Test</label>
+		</li>
+		<li class="styleManager-container-margin" style="position: relative;left: 10px;margin: 0;">
+			<div class="settings-anime-button" onclick="FW.setAnimeJS('play')">Play</div>
+		</li>
+		<li class="styleManager-container-margin" style="margin: 0;">
+			<div class="settings-anime-button" onclick="FW.setAnimeJS('reset')">Reset</div>
+		</li>
+	</ul>
+</div>
+
+
+
+
+<div id="id-settings-Events">
+	<ul style="display: flex;justify-content: flex-start;margin-bottom: 15px;padding: 0;">
+		<li class="styleManager-container-margin" style="display: block;width: 100%;">
+			<label class="styleManager-label" style="width: 100%; text-align: left; opacity: 0.5;">Properties for: Event <span id="lable-event-index">click</span></label>
+		</li>
+	</ul>
+	<div id="settings-event-container">
+		<div class="settings-event-item settings-event-item-active">click</div>
+		<div class="settings-event-item">dblclick</div>
+		<div class="settings-event-item">hover</div>
+		<div class="settings-event-item">scroll</div>
+		<div class="settings-event-item">dblclick</div>
+		<div class="settings-event-item">dblclick</div>
+		<div class="settings-event-item">dblclick</div>
+		<div class="settings-event-item">dblclick</div>
+	</div>
+</div>

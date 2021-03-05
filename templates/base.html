@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content= "width=device-width, user-scalable=no">
+	<title>{% block title %}Base Page{% endblock %}</title>
+
+
+	<meta data-meta-base='base'>
+
+
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- colorpicker -->
+	<script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.css">
+
+
+	<!-- Anime Js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='mix/fontawesome-free-5.14.0-web/css/all.min.css') }}">
+	<script src="{{ url_for('static', filename='mix/fontawesome-free-5.14.0-web/js/all.min.js') }}"></script>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='zero/css/styleTool.css') }}">
+
+	<!-- my static -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='all/css/style.css') }}">
+	<script src="{{ url_for('static', filename='all/js/settings.js') }}"></script>
+	<script src="{{ url_for('static', filename='all/js/class.js') }}"></script>
+	<script src="{{ url_for('static', filename='all/js/function.js') }}"></script>
+
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+
+	<script>
+  		var socket = io();
+	</script>
+
+	{% block StaticHead %}{% endblock %}
+	<link rel="shortcut icon" href="#" />
+</head>
+<body>
+	{% block StaticHeader %}{% endblock %}
+
+	{% block content %}{% endblock %}
+
+
+	<script src="{{ url_for('static', filename='all/js/script.js') }}"></script>
+
+	{% block StaticFooter %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,248 @@
+
+
+
+{% extends "base.html" %}
+{% block title %}View Tool{% endblock %}
+
+<!-- Static file -->
+
+{% block StaticHead %}
+	<meta data-meta-zero='ToolView'>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='ToolView/css/style.css') }}">
+	
+
+	<script src="{{ url_for('static', filename='ToolView/js/settings.js') }}"></script>
+	<script src="{{ url_for('static', filename='ToolView/js/class.js') }}"></script>
+	<script src="{{ url_for('static', filename='ToolView/js/function.js') }}"></script>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='ToolView/css/tool.css') }}">
+
+
+
+	<!-- adaptaciv ekran -->
+	<style data-screens-style-size='all'></style>
+	<style data-screens-style-size='SCREENS_320-480' media="screen and (max-width: 480px)">
+	</style>
+	<style data-screens-style-size='SCREENS_480-640' media="screen and (min-width: 480px) and (max-width: 640px)"></style>
+	<style data-screens-style-size='SCREENS_640-960' media="screen and (min-width: 640px) and (max-width: 960px)"></style>
+	<style data-screens-style-size='SCREENS_960-1200' media="screen and (min-width: 960px)"></style>
+	<style data-screens-style-size='SCREENS_1200' media="screen and (min-width: 1200px)"></style>
+
+{% endblock %}
+{% block StaticHeader %}{% endblock %}
+{% block StaticFooter %}
+<script src="{{ url_for('static', filename='ToolView/js/script.js') }}"></script>
+<script src="{{ url_for('static', filename='ToolView/js/event.js') }}"></script>
+<script src="{{ url_for('static', filename='ToolView/js/socket.js') }}"></script>
+{% endblock %}
+
+
+
+
+{% block content %}
+
+	
+
+	<!--  Fixed main menu  -->
+<!-- 
+	<div id="mainmenu" class="tp-menu" role="navigation" style="opacity: 1; top: 0px;transition: 300ms;">
+		<div id="info-alert" style="position:fixed; width:100%; z-index:10000;"></div>
+		<div id="mainmenu" class="tp-menu__wrapper" role="navigation">
+			<div class="tp-menu__waves">
+				<img src="static/img/tool/img/tp-menu__waves-black.png">
+			</div>
+			<div class="tp-menu__leftitems">
+
+				<a class="tp-menu__a-home" href="#">
+					<span class="tp-menu__icon-home glyphicon glyphicon-home">
+						
+					</span>
+					<span class="tp-menu__span-dashboard">Dashboard</span>
+				</a>
+				<span class="tp-menu__span-arrow">  ⟶</span>
+				<a class="tp-menu__a-pagetitle" href="#">bay</a>
+
+			</div>
+			<div class="tp-menu__leftdrop">
+				<div class="tp-menu__leftdrop-icon" onclick="tp_show_leftdrop('.tp-menu__leftdrop-list');"><i class="fas fa-caret-down" style="color: #000;"></i></div>
+				<div class="tp-menu__leftdrop-list">
+					<a href="#" style="background-color:#eee;padding-left:20px;padding-top:10px;padding-bottom:10px;margin:-10px;margin-bottom:10px;">Add new page</a>
+				<div class="tp-menu__leftdrop-list-wraper">
+					<a href="#" style="font-weight:600;"><i class="fas fa-home"></i>Blank page</a>
+				</div>
+				</div>
+			</div>
+			<div class="tp-menu__rightitems">
+				<ul class="navbar-nav navbar-right">
+					<li class="tp-menu__item dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown">More</a>
+						<ul class="dropdown-menu">
+							<li class="tp-menu__item-drop"><a href="#">Site Settings</a></li>
+							<li class="tp-menu__item-drop"><a href="#">Page Settings</a></li>
+							<li class="tp-menu__item-drop"><a href="#">Fonts</a></li>
+							<li class="tp-menu__item-drop"><a href="#">My websites</a></li>
+							<li class="tp-menu__item-drop"><a href="#">Profile</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div> -->
+
+
+
+
+
+
+
+
+<main id="MoreBlocks-clone-Tool" style="display: none;"></main>
+	<main id="MoreBlocks-Tool" style="display: none;">
+
+		
+
+
+
+		<div data-freelex-project-category-id="title">
+			<div data-freelex-project-id="1">
+				<p onclick="contenteditableClick(this)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, fugit sit libero, culpa quod accusantium, cumque, sint quam nobis harum veniam fuga vel eius eligendi temporibus! Error quibusdam neque tenetur?</p>
+				<p onclick="contenteditableClick(this)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, fugit sit libero, culpa quod accusantium, cumque, sint quam nobis harum veniam fuga vel eius eligendi temporibus! Error quibusdam neque tenetur?</p>
+			</div>
+
+		</div>
+		<div data-freelex-project-category-id="Zero Block">
+			<div data-freelex-project-id="0">
+				<h1 data-contenteditable='true'>Zero Block Headline</h1>
+				<p onclick="contenteditableClick(this)">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nisi dolorem fugit autem. Ad, sapiente? Illum illo quas repellat, sed dolorum cupiditate iusto, incidunt non quam officiis, rem nesciunt tenetur?
+				</p>
+			</div>
+
+		</div>
+	</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- allrecords -->
+	<div id="allrecords"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- allrecords Tool -->
+
+
+
+
+	<div id="MoreblocksContainer" onclick="tp__library__open('MoreBlocks')">
+		<span class="">
+			<i class="fas fa-times-circle"></i>
+		</span>
+	</div>
+
+
+
+	<div id="shortcuttooldiv" class="noselect">
+		<div id="shortcuttools" class="tp-shortcuttools__container">
+			<div class="tp-shortcuttools__wrapper">
+				<div class="tp-shortcuttools__star">
+					<span class="glyphicon glyphicon-star" style="color:#FDB849;"></span>
+					<span class="glyphicon glyphicon-star" style="color:#FDB849;"></span>
+					<span class="glyphicon glyphicon-star" style="color:#FDB849;"></span>
+				</div>
+				<div class="tp-shortcuttools__table">
+					<div class="tp-shortcuttools__one">
+						<div class="tp-shortcuttools__one-item" onclick="tp__library__open('MoreBlocks')">
+							<div class="tp-shortcuttools__one-item-icon">
+								<span class="glyphicon glyphicon-align-justify" style="color:#fff;"></span>
+							</div>
+							<div id="tp_btn_allblock" class="tp-shortcuttools__one-item-title">More blocks</div>
+						</div>
+					</div>
+					<div class="tp-shortcuttools__space"></div>
+					<div class="tp-shortcuttools__two">
+						<div class="tp-shortcuttools__two-item-title tp-shortcuttools__two-item_right-border" onclick="tp__addRecord('18','')">Cover</div>
+						<div class="tp-shortcuttools__two-item-title tp-shortcuttools__two-item_right-border" onclick="tp__addRecord('title','1')">Medium Title</div>
+						<div class="tp-shortcuttools__two-item-title tp-shortcuttools__two-item_right-border" onclick="tp__addRecord('18','')">Lead</div>
+						<div class="tp-shortcuttools__two-item-title tp-shortcuttools__two-item_right-border" onclick="tp__addRecord('18','')">Text</div>
+						<div class="tp-shortcuttools__two-item-title tp-shortcuttools__two-item_right-border" onclick="tp__addRecord('18','')">Impact</div>
+						<div class="tp-shortcuttools__two-item-title tp-shortcuttools__two-item_right-border" onclick="tp__addRecord('18','')">Image</div>
+						<div class="tp-shortcuttools__two-item-title tp-shortcuttools__two-item_right-border" onclick="tp__addRecord('18','')">Gallery</div>
+						<div class="tp-shortcuttools__two-item-title tp-shortcuttools__two-item_right-border" onclick="tp__addRecord('18','')" style="border:none">Line</div>
+					</div>
+					<div class="tp-shortcuttools__space"></div>
+					<div class="tp-shortcuttools__one tp-shortcuttools__one_white tp-shortcuttools__zero">
+						<div class="tp-shortcuttools__one-item" onclick="tp__addRecord('ZeroBlock','0')">
+							<div class="tp-shortcuttools__one-item-icon">
+								<!-- <img src="{{ url_for('static', filename='ToolView/img/svg/zero.svg') }}"> -->
+
+								<svg xmlns="http://www.w3.org/2000/svg" height="30" width="30">
+									<image href="{{ url_for('static', filename='ToolView/img/svg/zero.svg') }}"/ height="30" width="30">
+								</svg>
+
+
+							</div>
+
+							<div class="tp-shortcuttools__one-item-title">Zero</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
